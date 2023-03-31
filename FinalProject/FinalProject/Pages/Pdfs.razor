@@ -1,0 +1,34 @@
+﻿@page "/pdfs"
+@using System.Net.Http
+@using System.Text
+@inject HttpClient Http
+
+<h1>Generate PDF</h1>
+
+<button @onclick="GeneratePdf">Generate PDF</button>
+
+@if (pdfData != null)
+{
+    <a href="@pdfData" download="document.pdf">Download PDF</a>
+}
+
+@code {
+    private string pdfData;
+
+    private async Task GeneratePdf()
+    {
+        var username = "YOUR_USERNAME";
+        var apiKey = "YOUR_API_KEY";
+        var content = "<html><body><h1>Hello World!</h1></body></html>";
+        var base64Content = Convert.ToBase64String(Encoding.UTF8.GetBytes(content));
+
+        var requestContent = new MultipartFormDataContent();
+        requestContent.Add(new StringContent(username), "username");
+        requestContent.Add(new StringContent(apiKey), "key");
+        requestContent.Add(new StringContent(base64Content), "src");
+
+        var response = await Http.PostAsync("https://api.pdfcrowd.com/convert/", requestContent);
+        var responseData = await response.Content.ReadAsByteArrayAsync();
+        pdfData = $"data:application/pdf;base64,{Convert.ToBase64String(responseData)}";
+    }
+}
