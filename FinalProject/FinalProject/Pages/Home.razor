@@ -132,8 +132,8 @@
         </div>
 
         <div class="search__buttons">
-          <button>Google Search</button>
-          <button>I'm Feeling Lucky</button>
+        <button @onclick="Google">Google Search</button>
+        <button @onclick="Lucky">I'm Feeling Lucky</button>
         </div>
       </div>
       <!-- Search Ends -->
@@ -148,6 +148,21 @@
 
     private void NavigateToPage2()
     {
+        if(data != null)
+        {
+            NavigationManager.NavigateTo($"/index/{data}");
+        }        
+    }
+
+    private void Google()
+    {
+        data = "Google";
+        NavigationManager.NavigateTo($"/index/{data}");
+    }
+
+    private void Lucky()
+    {
+        data = "I'm Feeling Lucky";
         NavigationManager.NavigateTo($"/index/{data}");
     }
 }
