@@ -31,6 +31,7 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-11MM537VpREUoEMIiXr2jsO5eqHCkixj9Zi1I4hLPOw=",
       "Newtonsoft.Json.dll": "sha256-IsZJ91\/OW+fHzNqIgEc7Y072ns8z9dGritiSyvR9Wgc=",
       "System.IO.Pipelines.dll": "sha256-fpnawcAWgJ8i0JPJ9DhQ8XFDKYsTi6md2eRFNh\/bONA=",
+      "Toolbelt.Blazor.SpeechRecognition.dll": "sha256-SfDHE7Vg6TVy7TsWHO\/DwPegLEC9xl1a0l\/DnXE7dt8=",
       "Microsoft.CSharp.dll": "sha256-rP89uFQJ0BDoy22bKa2Xa37m\/rRVEUlORW82XMV6QkA=",
       "Microsoft.VisualBasic.Core.dll": "sha256-G81hPVAFXwb99vepzMDbl\/aG\/f9XiclEXxW9JDxViBU=",
       "Microsoft.VisualBasic.dll": "sha256-5M63+A+gO+JLoSijvLSj4HEysjYbMtPQjBNn8+PesgE=",
@@ -197,13 +198,13 @@
       "mscorlib.dll": "sha256-y7DhCb2PceYWjnHWsZokJrty551Q9XISH3Z72o6RdwI=",
       "netstandard.dll": "sha256-REs1\/xYvAzuX2k2Y5p\/5IaM3O\/zaiYSW62pOQBGMrrA=",
       "System.Private.CoreLib.dll": "sha256-Bz7VnNtt03SzAvIN30yx1e25P6SfMdLYIaKIy7ASEnw=",
-      "FinalProject.dll": "sha256-3KkAv3wBoKMdN32lr+QOxSTJfntaxyB2ytkvMJ\/74FE="
+      "FinalProject.dll": "sha256-+ZnUC\/BhOyxp2j6imrgFJX\/b9oh3EvF5nLz4pO1TteI="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "FinalProject.pdb": "sha256-OGR5luZ\/89UjQr9GA\/+iJChr9xZgi1TOC7PPhiLmE38="
+      "FinalProject.pdb": "sha256-hWZOzykBWmBN8+k3kHMMO5s2o8m720f8zK+pFHmPzDY="
     },
     "runtime": {
       "dotnet.6.0.15.4de83zsqbd.js": "sha256-fb2wBZaRp096nChMG9nDNEcW0kW1whA\/kfQNyH+5QpQ=",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hix3cw9O+TB+n7z1YM/QJOYTIA3/fjmFupzKmNFBfx8=",
+  "Hash": "7TABUTYDslhx+QYIqqGRSzGRafo2MAMilSVKgTbdTaU=",
   "Source": "FinalProject",
   "BasePath": "/",
   "Mode": "Root",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Banuka Ambegoda\\.nuget\\packages\\toolbelt.blazor.speechrecognition\\0.0.4.6-alpha\\staticwebassets\\script.min.js",
+      "SourceId": "Toolbelt.Blazor.SpeechRecognition",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Banuka Ambegoda\\.nuget\\packages\\toolbelt.blazor.speechrecognition\\0.0.4.6-alpha\\staticwebassets\\",
+      "BasePath": "_content/Toolbelt.Blazor.SpeechRecognition",
+      "RelativePath": "script.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Banuka Ambegoda\\.nuget\\packages\\toolbelt.blazor.speechrecognition\\0.0.4.6-alpha\\staticwebassets\\script.min.js"
+    },
     {
       "Identity": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.boot.json",
       "SourceId": "FinalProject",
@@ -3417,6 +3434,23 @@
       "OriginalItemSpec": "C:\\Program Files\\dotnet\\packs\\Microsoft.NETCore.App.Runtime.Mono.browser-wasm\\6.0.15\\runtimes\\browser-wasm\\lib\\net6.0\\System.Xml.XPath.XDocument.dll"
     },
     {
+      "Identity": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Toolbelt.Blazor.SpeechRecognition.dll",
+      "SourceId": "FinalProject",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Toolbelt.Blazor.SpeechRecognition.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Banuka Ambegoda\\.nuget\\packages\\toolbelt.blazor.speechrecognition\\0.0.4.6-alpha\\lib\\netstandard2.0\\Toolbelt.Blazor.SpeechRecognition.dll"
+    },
+    {
       "Identity": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\bin\\Debug\\net6.0\\wwwroot\\_framework\\WindowsBase.dll",
       "SourceId": "FinalProject",
       "SourceType": "Computed",
@@ -5967,6 +6001,23 @@
       "OriginalItemSpec": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.dll"
     },
     {
+      "Identity": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\obj\\Debug\\net6.0\\build-gz\\rHTTZi+Q.gz",
+      "SourceId": "FinalProject",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Toolbelt.Blazor.SpeechRecognition.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Toolbelt.Blazor.SpeechRecognition.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Toolbelt.Blazor.SpeechRecognition.dll"
+    },
+    {
       "Identity": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\obj\\Debug\\net6.0\\build-gz\\RjH6a6In.gz",
       "SourceId": "FinalProject",
       "SourceType": "Computed",
@@ -6866,6 +6917,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FinalProject.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\wwwroot\\app.js",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "app.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.js"
     },
     {
       "Identity": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\wwwroot\\css\\app.css",

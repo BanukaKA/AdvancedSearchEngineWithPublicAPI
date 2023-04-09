@@ -1,8 +1,10 @@
-﻿@page "/"
+﻿@page "/index/{data}"
 @using System.Net.Http
 @using System.Net.Http.Json
 @using Newtonsoft.Json
 @using FinalProject.Models
+@using Toolbelt.Blazor.SpeechRecognition
+@inject SpeechRecognition SpeechRecognition
 @inject HttpClient Http
 
 
@@ -10,18 +12,22 @@
     <meta charset="UTF-8">
     <title>Banu's Google</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+    <style>
+    </style>
 </head>
 <body>
 <header>
     <div class="left">
             <img src="./google.png" style="height: 35%; margin-right: 30px;" alt="">
-        <div class="searchBar">
-            <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search" @bind="query"/>
-            <button id="searchQuerySubmit" type="submit" @onclick="Search"  name="searchQuerySubmit">
-              <svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#666666" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
-              </svg>
-            </button>
-          </div>
+            <div class="search-container">
+                <a class="g-icon" href="https://google.com" target="_blank"><img src="https://user-images.githubusercontent.com/48612525/86507657-d54fbd80-bd8e-11ea-866b-ac26496481ae.png" alt="google icon" /></a>
+                <input class="search-bar" type="text" placeholder="Enter Search.." @bind="query" @onkeydown="@Enter" />
+                <button class="mic" @onclick="StartSpeechRecognition"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+                <button @onclick="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+            <div class="voice">
+                <p class="access-voice">Search by voice</p>
+            </div>
     </div>
     <div class="right">
     </div>
@@ -36,13 +42,12 @@
         <label for="home" class="home"><i class="fas fa-search"></i>Search</label>
         <label for="blog" class="blog"><i class="fas fa-image"></i>Images</label>
         <label for="code" class="code"><i class="fas fa-video"></i>Videos</label>
-        <label for="help" class="help"><i class="fas fa-newspaper"></i>PDFy</label>
+        <label for="help" class="help"><i class="fas fa-newspaper"></i>Docs</label>
         <div class="slider"></div>
     </nav>
     <hr />
     <section>
         <div class="content content-1">
-
                 @if (results != null)
                 {
                     <ul>
@@ -58,6 +63,15 @@
                 }
         </div>
         <div class="content content-2">
+            
+                <select @bind="imgType" class="form-select" style="border:10%;">
+                    <option value="">All</option>
+                    <option value="jpg">JPG</option>
+                    <option value="png">PNG</option>
+                    <option value="bmp">BMP</option>
+                    <option value="gif">GIF</option>
+                    <option value="webp">WEBP</option>
+                </select><br />
 
                 @if (results != null)
                 {
@@ -118,8 +132,39 @@
             }
         </div>
         <div class="content content-4">
-            <div class="title">PDFy</div>
-            <p>Download a summarized document about all the information of this particular search as a pdf. Click the button below.</p>
+                <select @bind="fileType" class="form-select" style="border:10%;">
+                    <option value="pdf">PDF</option>
+                    <option value="doc">Word</option>
+                    <option value="xls">Excel</option>
+                    <option value="ppt">PowerPoint</option>
+                </select><br />
+
+                @if (docResults == null)
+                {
+                    <p>Loading... @transcription</p>
+                }
+                else
+                {
+                    <div class="row" style="margin-left:3%; margin-right:2%;">
+                        @foreach (var doc in docResults.Items)
+                        {
+                            <div class="col-md-4">
+                                <div class="card mb-4 shadow-sm">
+                                    <div class="card-body">
+                                        <h5>@doc.Title</h5>
+                                        <p class="card-text">@doc.Snippet</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <a href="@doc.Link" target="_blank" class="btn btn-sm btn-outline-secondary">View</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                }
         </div>
     </section>
 </div>
@@ -128,43 +173,7 @@
 </body>
 
 @code {
-    private string query;
-    private string nextPageToken;
-    private string prevPageToken;
-    private bool IsDisabled =true;
-    private GoogleSearchResults results;
-    private GoogleSearchResults imageResults;
-    private YouTubeSearchResults videos;
-
-    private async Task Search()
-    {
-        var apiKey = "AIzaSyCiIEeRSk2UpSerxGxStHL27X0YMBbi0LE ";
-        var searchEngineId = "44b128b3a85a3465e";
-        var response = await Http.GetFromJsonAsync<GoogleSearchResults>($"https://www.googleapis.com/customsearch/v1?key={apiKey}&cx={searchEngineId}&q={query}");
-        results = response;
-
-        response = await Http.GetFromJsonAsync<GoogleSearchResults>($"https://www.googleapis.com/customsearch/v1?key={apiKey}&cx={searchEngineId}&q={query}&searchType=image");
-        imageResults = response;
-
-        var url = $"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&q={query}&key=AIzaSyBHXprpxe_e-zU42QcDo_VXkxzOwBEW1wQ";
-        var responseV = await Http.GetFromJsonAsync<YouTubeSearchResults>(url);
-        videos = responseV;
-        nextPageToken = videos.NextPageToken;
-        IsDisabled = false;
-    }
-
-    private async Task NextPage()
-    {
-        videos = await Http.GetFromJsonAsync<YouTubeSearchResults>($"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&pageToken={nextPageToken}&q={query}&key=AIzaSyBHXprpxe_e-zU42QcDo_VXkxzOwBEW1wQ");
-        nextPageToken = videos.NextPageToken;
-        prevPageToken = videos.PrevPageToken;
-        IsDisabled = false;
-    }
-    private async Task PrevPage()
-    {
-        videos = await Http.GetFromJsonAsync<YouTubeSearchResults>($"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&pageToken={prevPageToken}&q={query}&key=AIzaSyBHXprpxe_e-zU42QcDo_VXkxzOwBEW1wQ");
-        nextPageToken = videos.NextPageToken;
-        prevPageToken = videos.PrevPageToken;
-    }
+    
+    //The C# code is seperated into the Index.razor.cs file for better organization
 
 }

@@ -530,6 +530,29 @@
         "build": {
           "buildTransitive/netcoreapp3.1/System.Text.Json.targets": {}
         }
+      },
+      "Toolbelt.Blazor.SpeechRecognition/0.0.4.6-alpha": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.0.0",
+          "Microsoft.AspNetCore.Components.Web": "3.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Toolbelt.Blazor.SpeechRecognition.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Toolbelt.Blazor.SpeechRecognition.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Toolbelt.Blazor.SpeechRecognition.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Toolbelt.Blazor.SpeechRecognition.props": {}
+        }
       }
     },
     "net6.0/browser-wasm": {
@@ -1054,6 +1077,29 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/System.Text.Json.targets": {}
+        }
+      },
+      "Toolbelt.Blazor.SpeechRecognition/0.0.4.6-alpha": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.0.0",
+          "Microsoft.AspNetCore.Components.Web": "3.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Toolbelt.Blazor.SpeechRecognition.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Toolbelt.Blazor.SpeechRecognition.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Toolbelt.Blazor.SpeechRecognition.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Toolbelt.Blazor.SpeechRecognition.props": {}
         }
       }
     }
@@ -1872,6 +1918,24 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Toolbelt.Blazor.SpeechRecognition/0.0.4.6-alpha": {
+      "sha512": "yIDbTGknhj7zjfEUoSnijmXd78tfqShDbTEnqxTEgPpuSq5M5JIlm3voWVacOLS00lfvPPB7SA60CqG30IlNxg==",
+      "type": "package",
+      "path": "toolbelt.blazor.speechrecognition/0.0.4.6-alpha",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "build/Toolbelt.Blazor.SpeechRecognition.props",
+        "buildMultiTargeting/Toolbelt.Blazor.SpeechRecognition.props",
+        "buildTransitive/Toolbelt.Blazor.SpeechRecognition.props",
+        "lib/netstandard2.0/Toolbelt.Blazor.SpeechRecognition.dll",
+        "lib/netstandard2.0/Toolbelt.Blazor.SpeechRecognition.xml",
+        "staticwebassets/script.min.js",
+        "toolbelt.blazor.speechrecognition.0.0.4.6-alpha.nupkg.sha512",
+        "toolbelt.blazor.speechrecognition.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -1879,7 +1943,8 @@
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.1",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.1",
       "Newtonsoft.Json >= 13.0.3",
-      "System.Net.Http.Json >= 6.0.1"
+      "System.Net.Http.Json >= 6.0.1",
+      "Toolbelt.Blazor.SpeechRecognition >= 0.0.4.6-alpha"
     ]
   },
   "packageFolders": {
@@ -1942,6 +2007,10 @@
           "System.Net.Http.Json": {
             "target": "Package",
             "version": "[6.0.1, )"
+          },
+          "Toolbelt.Blazor.SpeechRecognition": {
+            "target": "Package",
+            "version": "[0.0.4.6-alpha, )"
           }
         },
         "imports": [

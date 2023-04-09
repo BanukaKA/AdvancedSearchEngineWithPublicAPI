@@ -127,7 +127,7 @@ header {
         width: 40%;
     }
 
-        .main .form-group input {
+        .main .form-group {
             margin-top: 20px;
             padding: 15px;
             border-radius: 50px;
@@ -171,40 +171,97 @@ header {
 /* Fin de la partie principale */
 
 /*Search Bar 2*/
-.searchBar {
-    width: 60%;
-    height: 35%;
+.search-container {
     display: flex;
-    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    margin-left: 0;
+    background: #fff;
+    border-radius: 500px;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #CCC;
+    height: 40%;
 }
 
-#searchQueryInput {
-    width: 100%;
-    height: 2.8rem;
-    background: #f5f5f5;
-    outline: none;
-    border: none;
-    border-radius: 1.625rem;
-    padding: 0 3.5rem 0 1.5rem;
-    font-size: 1rem;
-}
-
-#searchQuerySubmit {
-    width: 3.5rem;
-    height: 2.8rem;
-    margin-left: -3.5rem;
-    background: none;
-    border: none;
-    outline: none;
-}
-
-    #searchQuerySubmit:hover {
-        cursor: pointer;
+    .search-container .fc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
+    .search-container img {
+        height: 20px;
+        width: 20px;
+    }
 
+    .search-container .search-bar {
+        padding: 5px;
+        margin-left: 15px;
+        margin-right: 15px;
+        width: 300px;
+        border-radius: 5px;
+        background: transparent;
+        border: 1px solid transparent;
+        outline: none;
+        font-size: 1.2rem;
+        overflow-x: scroll;
+    }
+
+    .search-container button {
+        background: transparent;
+        border: none;
+    }
+
+        .search-container button i {
+            font-size: 1.5rem;
+            margin: 3px;
+        }
+
+        .search-container button:hover {
+            cursor: pointer;
+        }
+
+    .search-container:hover {
+        box-shadow: 0px 1px 4px -1px #4f4e4f;
+    }
+
+.voice {
+    position: relative;
+    left: 13%;
+    height: 30px;
+    background: #111;
+    color: #FFF;
+    opacity: 0;
+    clip-path: polygon(0 84%, 100% 84%, 100% 18%, 56% 18%, 51% 8%, 45% 19%, 0 19%);
+}
+
+    .voice .access-voice {
+        color: #FFF;
+        text-align: center;
+        background: #000;
+        font-size: 1rem;
+        margin: 3px;
+        padding-bottom: 10px;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-top: 10px;
+        vertical-align: center;
+    }
+
+@media only screen and (max-width: 570px) {
+    .search-bar {
+        width: 200px !important;
+    }
+
+    .voice {
+        position: relative;
+        left: 23% !important;
+    }
+
+        .voice .access-voice {
+            font-size: 0.8rem;
+        }
+}
 
 /*Tabs*/
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xh2RXCkakXBX1ScFdVd8XemxW7V3HH2GJmv3bHOCTZ4xP9r1aJUu8P1Oh3ypnwVpPW1qKRifYiOyajlUgmkwWw==",
+  "dgSpecHash": "cDY//Jiee1FPOQXGEhKMABggiDlIPWaqw4+THvkCS3GUl5OAyVKOJyM/d48iN4ytZ1Yktu5O2qHa08bjTAjFNA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Banuka Ambegoda\\Desktop\\GoogleCloneAndSummerizedReportGenrator-master\\FinalProject\\FinalProject\\FinalProject.csproj",
   "expectedPackageFiles": [
@@ -34,7 +34,8 @@
     "C:\\Users\\Banuka Ambegoda\\.nuget\\packages\\system.net.http.json\\6.0.1\\system.net.http.json.6.0.1.nupkg.sha512",
     "C:\\Users\\Banuka Ambegoda\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Banuka Ambegoda\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\Banuka Ambegoda\\.nuget\\packages\\system.text.json\\6.0.7\\system.text.json.6.0.7.nupkg.sha512"
+    "C:\\Users\\Banuka Ambegoda\\.nuget\\packages\\system.text.json\\6.0.7\\system.text.json.6.0.7.nupkg.sha512",
+    "C:\\Users\\Banuka Ambegoda\\.nuget\\packages\\toolbelt.blazor.speechrecognition\\0.0.4.6-alpha\\toolbelt.blazor.speechrecognition.0.0.4.6-alpha.nupkg.sha512"
   ],
   "logs": []
 }
