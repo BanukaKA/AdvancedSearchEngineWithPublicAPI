@@ -1,4 +1,5 @@
-﻿using FinalProject.Models;
+﻿using FinalProject.API;
+using FinalProject.Models;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using System.Net.Http.Json;
@@ -27,44 +28,69 @@ namespace FinalProject.Pages
 
         private string transcription = "";
 
+
+        //Onclick Enter
         public async Task Enter(Microsoft.AspNetCore.Components.Web.KeyboardEventArgs e)
-  {
+        {
             if (e.Code == "Enter" || e.Code == "NumpadEnter")
             {
                 Search();
             }
         }
 
+
+        //Search Functionality
         private async Task Search()
         {
-            var apiKey = "AIzaSyCiIEeRSk2UpSerxGxStHL27X0YMBbi0LE ";
-            var searchEngineId = "44b128b3a85a3465e";
-            var response = await Http.GetFromJsonAsync<GoogleSearchResults>($"https://www.googleapis.com/customsearch/v1?key={apiKey}&cx={searchEngineId}&q={query}");
+
+            var response = await Http.GetFromJsonAsync<GoogleSearchResults>($"https://www.googleapis.com/customsearch/v1?key={Jeeves.GoogleApiKey}&cx={Jeeves.GoogleSearchEngineID}&q={query}");
             results = response;
 
-            response = await Http.GetFromJsonAsync<GoogleSearchResults>($"https://www.googleapis.com/customsearch/v1?key={apiKey}&cx={searchEngineId}&q={query}&searchType=image&fileType={imgType}");
+            response = await Http.GetFromJsonAsync<GoogleSearchResults>($"https://www.googleapis.com/customsearch/v1?key={Jeeves.GoogleApiKey}&cx={Jeeves.GoogleSearchEngineID}&q={query}&searchType=image&fileType={imgType}");
             imageResults = response;
 
-            response = await Http.GetFromJsonAsync<GoogleSearchResults>($"https://www.googleapis.com/customsearch/v1?key={apiKey}&cx={searchEngineId}&q={query}&fileType={fileType}");
+            response = await Http.GetFromJsonAsync<GoogleSearchResults>($"https://www.googleapis.com/customsearch/v1?key={Jeeves.GoogleApiKey}&cx={Jeeves.GoogleSearchEngineID}&q={query}&fileType={fileType}");
             docResults = response;
 
-            var url = $"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&q={query}&key=AIzaSyBHXprpxe_e-zU42QcDo_VXkxzOwBEW1wQ";
+            var url = $"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&q={query}&key={Jeeves.YoutubeApiKey}";
             var responseV = await Http.GetFromJsonAsync<YouTubeSearchResults>(url);
             videos = responseV;
             nextPageToken = videos.NextPageToken;
             IsDisabled = false;
         }
 
+
+        //Image type changing
+        private async Task ImgTypeChanged()
+        {
+
+            var response = await Http.GetFromJsonAsync<GoogleSearchResults>($"https://www.googleapis.com/customsearch/v1?key={Jeeves.GoogleApiKey}&cx={Jeeves.GoogleSearchEngineID}&q={query}&searchType=image&fileType={imgType}");
+            imageResults = response;
+
+            await InvokeAsync(StateHasChanged);
+        }
+
+        //Doc Type Changing
+        private async Task DocTypeChanged()
+        {
+
+            var response = await Http.GetFromJsonAsync<GoogleSearchResults>($"https://www.googleapis.com/customsearch/v1?key={Jeeves.GoogleApiKey}&cx={Jeeves.GoogleSearchEngineID}&q={query}&fileType={fileType}");
+            docResults = response;
+
+            await InvokeAsync(StateHasChanged);
+        }
+
+        //Paging
         private async Task NextPage()
         {
-            videos = await Http.GetFromJsonAsync<YouTubeSearchResults>($"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&pageToken={nextPageToken}&q={query}&key=AIzaSyBHXprpxe_e-zU42QcDo_VXkxzOwBEW1wQ");
+            videos = await Http.GetFromJsonAsync<YouTubeSearchResults>($"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&pageToken={nextPageToken}&q={query}&key={Jeeves.YoutubeApiKey}");
             nextPageToken = videos.NextPageToken;
             prevPageToken = videos.PrevPageToken;
             IsDisabled = false;
         }
         private async Task PrevPage()
         {
-            videos = await Http.GetFromJsonAsync<YouTubeSearchResults>($"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&pageToken={prevPageToken}&q={query}&key=AIzaSyBHXprpxe_e-zU42QcDo_VXkxzOwBEW1wQ");
+            videos = await Http.GetFromJsonAsync<YouTubeSearchResults>($"https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&pageToken={prevPageToken}&q={query}&key={Jeeves.YoutubeApiKey}");
             nextPageToken = videos.NextPageToken;
             prevPageToken = videos.PrevPageToken;
         }
@@ -74,7 +100,7 @@ namespace FinalProject.Pages
         [Parameter]
         public string Data { get; set; }
 
-
+        //Page Initialized
         protected async override void OnInitialized()
         {
             SpeechRecognition.Result += OnSpeechRecognized;
@@ -105,6 +131,7 @@ namespace FinalProject.Pages
             SpeechRecognition.Result -= OnSpeechRecognized;
         }
 
+        //Toggling Between Light and Dark Mode
         private async Task ToggleTheme()
         {
             isDarkMode = !isDarkMode;

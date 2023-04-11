@@ -2,7 +2,8 @@
 
 namespace FinalProject.Models
 {
-
+    //Name : Banuka Kumara Ambegoda
+    //Project Blazor PublicAPI
     public class Result
     {
         public string Title { get; set; }

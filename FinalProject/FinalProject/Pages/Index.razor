@@ -3,6 +3,7 @@
 @using System.Net.Http.Json
 @using Newtonsoft.Json
 @using FinalProject.Models
+@using FinalProject.API
 @using Toolbelt.Blazor.SpeechRecognition
 @using Microsoft.JSInterop
 @inject IJSRuntime JSRuntime
@@ -59,7 +60,7 @@
         <div class="content content-1">
                 @if (results != null)
                 {
-                    <ul>
+                    <ul style="padding-left:0;">
                         @foreach (var result in results.Items)
                         {
                             <li style="list-style-type: none;">
@@ -73,7 +74,7 @@
         </div>
         <div class="content content-2">
             
-                <select @bind="imgType" class="form-select" style="border:10%;">
+                <select @bind-value="imgType" @onchange="ImgTypeChanged" @bind-value:event="oninput" class="form-select" style="border:10%;">
                     <option value="">All</option>
                     <option value="jpg">JPG</option>
                     <option value="png">PNG</option>
@@ -141,12 +142,12 @@
             }
         </div>
         <div class="content content-4">
-                <select @bind="fileType" class="form-select" style="border:10%;">
+                <select @bind-value="fileType" @onchange="DocTypeChanged" @bind-value:event="oninput" class="form-select" style="border:10%;">
                     <option value="pdf">PDF</option>
                     <option value="doc">Word</option>
                     <option value="xls">Excel</option>
                     <option value="ppt">PowerPoint</option>
-                </select><br />
+                </select>
 
                 @if (docResults == null)
                 {
@@ -154,7 +155,7 @@
                 }
                 else
                 {
-                    <div class="row" style="margin-left:3%; margin-right:2%;">
+                    <div class="row" style="padding-top:1rem;">
                         @foreach (var doc in docResults.Items)
                         {
                             <div class="col-md-4">
