@@ -22,7 +22,7 @@ a, .btn-link {
 }
 
 .content {
-    padding-top: 1.1rem;
+    padding-top: 0rem;
 }
 
 .valid.modified:not([type=checkbox]) {
@@ -31,6 +31,9 @@ a, .btn-link {
 
 .invalid {
     outline: 1px solid red;
+}
+header{
+    padding-top: 1.1rem;
 }
 
 .validation-message {
@@ -370,4 +373,67 @@ section .content p {
         width: 30px;
         height: 30px;
         object-fit: cover;
+    }
+
+.dark {
+    --background-color: #1c1c1e;
+    --text-color: #ffffff;
+    
+    
+}
+
+    .dark * {
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+
+ /*Toggle Button*/
+
+.toggle-button {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+    border-radius: 17px;
+    overflow: hidden;
+}
+
+    .toggle-button input[type="checkbox"] {
+        display: none;
+    }
+
+    .toggle-button label {
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .toggle-button .toggle-track {
+        width: 100%;
+        height: 100%;
+        background-color: #ccc;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .toggle-button .toggle-thumb {
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .toggle-button input[type="checkbox"]:checked + label .toggle-track {
+        background-color: #333;
+    }
+
+    .toggle-button input[type="checkbox"]:checked + label .toggle-thumb {
+        transform: translateX(26px);
     }

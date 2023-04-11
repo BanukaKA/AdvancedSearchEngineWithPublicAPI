@@ -4,6 +4,8 @@
 @using Newtonsoft.Json
 @using FinalProject.Models
 @using Toolbelt.Blazor.SpeechRecognition
+@using Microsoft.JSInterop
+@inject IJSRuntime JSRuntime
 @inject SpeechRecognition SpeechRecognition
 @inject HttpClient Http
 
@@ -30,6 +32,13 @@
             </div>
     </div>
     <div class="right">
+        <div class="toggle-button">
+            <input type="checkbox" id="darkmode-toggle" @onchange="ToggleTheme" />
+            <label for="darkmode-toggle">
+                <div class="toggle-track"></div>
+                <div class="toggle-thumb"></div>
+            </label>
+        </div>
     </div>
 </header>
 
@@ -71,7 +80,7 @@
                     <option value="bmp">BMP</option>
                     <option value="gif">GIF</option>
                     <option value="webp">WEBP</option>
-                </select><br />
+                </select>
 
                 @if (results != null)
                 {
@@ -97,7 +106,7 @@
                 }
                 else
                 {
-                    <div class="row" style="margin-left:3%; margin-right:2%;">
+                    <div class="row" >
                         @foreach (var video in videos.Items)
                         {
                             <div class="col-md-4">

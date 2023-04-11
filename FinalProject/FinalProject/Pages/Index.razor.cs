@@ -1,6 +1,8 @@
 ﻿using FinalProject.Models;
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 using System.Net.Http.Json;
+using System.Net.NetworkInformation;
 using Toolbelt.Blazor.SpeechRecognition;
 
 namespace FinalProject.Pages
@@ -15,8 +17,9 @@ namespace FinalProject.Pages
         private string nextPageToken;
         private string prevPageToken;
         private bool IsDisabled = true;
-        private string fileType;
+        private string fileType = "pdf";
         private string imgType;
+        private bool isDarkMode = false;
         private GoogleSearchResults docResults;
         private GoogleSearchResults results;
         private GoogleSearchResults imageResults;
@@ -102,5 +105,17 @@ namespace FinalProject.Pages
             SpeechRecognition.Result -= OnSpeechRecognized;
         }
 
+        private async Task ToggleTheme()
+        {
+            isDarkMode = !isDarkMode;
+            if (isDarkMode)
+            {
+                await JSRuntime.InvokeVoidAsync("document.body.classList.add", "dark");
+            }
+            else
+            {
+                await JSRuntime.InvokeVoidAsync("document.body.classList.remove", "dark");
+            }
+        }
     }
 }
