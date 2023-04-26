@@ -1,0 +1,45 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = FinalProject
+build_property.RootNamespace = FinalProject
+build_property.ProjectDir = C:\Users\Banuka Ambegoda\Desktop\FinalProject_Banuka_Ambegoda-Prog1442 (1)\FinalProject_Banuka_Ambegoda-Prog1442\FinalProject\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Banuka Ambegoda\Desktop\FinalProject_Banuka_Ambegoda-Prog1442 (1)\FinalProject_Banuka_Ambegoda-Prog1442\FinalProject
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Banuka Ambegoda/Desktop/FinalProject_Banuka_Ambegoda-Prog1442 (1)/FinalProject_Banuka_Ambegoda-Prog1442/FinalProject/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Banuka Ambegoda/Desktop/FinalProject_Banuka_Ambegoda-Prog1442 (1)/FinalProject_Banuka_Ambegoda-Prog1442/FinalProject/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Banuka Ambegoda/Desktop/FinalProject_Banuka_Ambegoda-Prog1442 (1)/FinalProject_Banuka_Ambegoda-Prog1442/FinalProject/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Banuka Ambegoda/Desktop/FinalProject_Banuka_Ambegoda-Prog1442 (1)/FinalProject_Banuka_Ambegoda-Prog1442/FinalProject/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Banuka Ambegoda/Desktop/FinalProject_Banuka_Ambegoda-Prog1442 (1)/FinalProject_Banuka_Ambegoda-Prog1442/FinalProject/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Banuka Ambegoda/Desktop/FinalProject_Banuka_Ambegoda-Prog1442 (1)/FinalProject_Banuka_Ambegoda-Prog1442/FinalProject/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-q1tawplx99
+
+[C:/Users/Banuka Ambegoda/Desktop/FinalProject_Banuka_Ambegoda-Prog1442 (1)/FinalProject_Banuka_Ambegoda-Prog1442/FinalProject/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-nex9ykn4pl
