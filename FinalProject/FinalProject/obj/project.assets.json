@@ -1954,11 +1954,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Banuka Ambegoda\\Desktop\\FinalProject_Banuka_Ambegoda-Prog1442 (1)\\FinalProject_Banuka_Ambegoda-Prog1442\\FinalProject\\FinalProject.csproj",
+      "projectUniqueName": "P:\\Niagara College\\Term 4\\MobileDev\\FinalProject_Banuka_Ambegoda-Prog1442 (1)\\FinalProject\\FinalProject\\FinalProject.csproj",
       "projectName": "FinalProject",
-      "projectPath": "C:\\Users\\Banuka Ambegoda\\Desktop\\FinalProject_Banuka_Ambegoda-Prog1442 (1)\\FinalProject_Banuka_Ambegoda-Prog1442\\FinalProject\\FinalProject.csproj",
+      "projectPath": "P:\\Niagara College\\Term 4\\MobileDev\\FinalProject_Banuka_Ambegoda-Prog1442 (1)\\FinalProject\\FinalProject\\FinalProject.csproj",
       "packagesPath": "C:\\Users\\Banuka Ambegoda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Banuka Ambegoda\\Desktop\\FinalProject_Banuka_Ambegoda-Prog1442 (1)\\FinalProject_Banuka_Ambegoda-Prog1442\\FinalProject\\obj\\",
+      "outputPath": "P:\\Niagara College\\Term 4\\MobileDev\\FinalProject_Banuka_Ambegoda-Prog1442 (1)\\FinalProject\\FinalProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

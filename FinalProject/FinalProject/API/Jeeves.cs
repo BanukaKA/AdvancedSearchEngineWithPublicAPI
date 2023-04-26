@@ -11,13 +11,13 @@ namespace FinalProject.API
     public static class Jeeves {
 
         //Google Search API Key
-        public static string GoogleApiKey = "AIzaSyCiIEeRSk2UpSerxGxStHL27X0YMBbi0LE";
+        public static string GoogleApiKey = "";
 
         //Youtube API Key
-        public static string YoutubeApiKey = "AIzaSyBHXprpxe_e-zU42QcDo_VXkxzOwBEW1wQ";
+        public static string YoutubeApiKey = "";
 
         //Google Custom Search Engine ID
-        public static string GoogleSearchEngineID = "44b128b3a85a3465e";
+        public static string GoogleSearchEngineID = "";
 
     } 
 
