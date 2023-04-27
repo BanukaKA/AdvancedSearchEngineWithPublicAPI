@@ -1,5 +1,5 @@
 # A Google Clone "An advanced search engine with the Google's Public APIs"
-This is a custom clone of google built with Blazor web assembly which also has the feature of downloading a summarization of a google search as a pdf
+This is a custom clone of google built with Blazor web assembly which has multiple features that even google search does not posses. It has all possible features of google search including Voice Search, Image Search, Video Search, Paging, Furthur Filtering and Dark Theme.
 
 Watch the Application Walkthrough :
 https://www.youtube.com/watch?v=ewMKKw0265I&t=4s 
